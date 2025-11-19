@@ -4,19 +4,26 @@
 [ext_resource type="PackedScene" uid="uid://cv243byioccp7" path="res://ball.tscn" id="1_ig7tw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
-size = Vector2(20, 697)
+size = Vector2(177, 697)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
-size = Vector2(1180, 23)
+size = Vector2(1586, 101)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
-size = Vector2(20, 678)
+size = Vector2(264, 764)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lquwl"]
-size = Vector2(1163, 19)
+size = Vector2(1594, 161)
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_0xm2m")
+
+[node name="LeftBump" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LeftBump"]
+position = Vector2(205.60863, 328.0722)
+scale = Vector2(2.1447172, 1.1163192)
+polygon = PackedVector2Array(-96.33374, -144.28868, -95.401215, 284.80008, 439.8675, 290.1749, 438.00244, -138.91388, 402.10028, 52.787567, 356.87286, 154.9089, 283.66974, 215.8234, 173.16566, 243.59323, 57.998962, 208.65698, -23.596878, 157.59631, -76.28448, 16.059723)
 
 [node name="Ball" parent="." instance=ExtResource("1_ig7tw")]
 position = Vector2(345, 206)
@@ -24,23 +31,23 @@ position = Vector2(345, 206)
 [node name="LeftWall" type="StaticBody2D" parent="."]
 
 [node name="LeftCollisionShape2D" type="CollisionShape2D" parent="LeftWall"]
-position = Vector2(-11, 321.5)
+position = Vector2(-89, 327)
 shape = SubResource("RectangleShape2D_0xm2m")
 
 [node name="TopWall" type="StaticBody2D" parent="."]
 
 [node name="TopCollisionShape2D" type="CollisionShape2D" parent="TopWall"]
-position = Vector2(580, -11.5)
+position = Vector2(612, -50.5)
 shape = SubResource("RectangleShape2D_h2yge")
 
 [node name="RightWall" type="StaticBody2D" parent="."]
 
 [node name="RightCollisionShape2D" type="CollisionShape2D" parent="RightWall"]
-position = Vector2(1160, 327)
+position = Vector2(1282, 284)
 shape = SubResource("RectangleShape2D_1bvp3")
 
 [node name="BottomWall" type="StaticBody2D" parent="."]
 
 [node name="BottomCollisionShape2D" type="CollisionShape2D" parent="BottomWall"]
-position = Vector2(575.5, 657.5)
+position = Vector2(617, 728.5)
 shape = SubResource("RectangleShape2D_lquwl")
