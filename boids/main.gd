@@ -4,7 +4,7 @@ extends Node2D
 @export var boid_scene: PackedScene
 
 # Количество боидов, которые нужно создать
-@export var boid_count := 100
+@export var boid_count := 400
 
 # Радиус, в котором боид "видит" соседей и учитывает их при движении
 @export var neighbour_radius := 200.0
